@@ -1,0 +1,13 @@
+<view class='camera'>
+  <text>\n\n</text>
+  <camera wx:if="{{isAuth}}" device-position="back" flash="off" binderror="error"></camera>
+</view>
+
+<text class="id"> Alice's id = {{user_id}}, Bob's id = </text>
+<input bindinput = "getBobId" class="id2" placeholder="666" />
+<input bindinput = "getText" class="input" name="userName" placeholder="Please type cypertext!" auto-focus="true" />
+<button bindtap="uploadFile">send</button>
+<button class="takePhoto" type="primary" bindtap="takePhoto">capture</button>
+<button class="refresh" type="primary" bindtap="refresh">refresh</button>
+<image class="recv_img" mode="{{item.mode}}" src='{{recv_src}}'></image>
+<text class="recv_text">{{recv_text}} </text>
